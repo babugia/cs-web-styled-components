@@ -11,10 +11,11 @@ const StyledLoginButton = styled(LoginButton)`
   height: 45px;
   color: white;
   margin-right: 1rem;
+  border-radius: 5px;
   align-self: center;
   cursor: pointer;
   background: #6639a6;
-  font-family: Roboto;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -22,6 +23,10 @@ const StyledLoginButton = styled(LoginButton)`
   text-align: center;
   border: 2px white solid;
   outline: none;
+
+  &:hover {
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
+  }
 `;
 
 export default memo(StyledLoginButton);
