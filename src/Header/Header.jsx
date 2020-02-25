@@ -9,9 +9,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 4.5rem;
   background: #6639a6;

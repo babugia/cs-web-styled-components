@@ -1,12 +1,15 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
+import { routerPathMapper } from './headerUtils';
+import { Link } from 'react-router-dom';
 
 const MenuItem = props => {
   const { key, selected, setSelectedMenu, children, className } = props;
-  console.log({ setSelectedMenu });
-
   const handleOnClick = () => {
+    const path = routerPathMapper[children];
     setSelectedMenu(children);
+    <Link to={path} />;
+    console.log({ path: routerPathMapper[children] });
   };
 
   // TODO: A TAG NEED HREF, SO FIX THIS LATER WITH REACT ROUTER
