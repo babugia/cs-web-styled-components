@@ -11,5 +11,5 @@ export const routerPathMapper = {
   Matches: 'matches',
   Events: 'events',
   Teams: 'teams',
-  Stats: 'Stats'
+  Stats: 'stats'
 };

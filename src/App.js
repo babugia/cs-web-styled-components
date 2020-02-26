@@ -5,7 +5,10 @@ import Matches from './Matches/Matches';
 import Teams from './Teams/Teams';
 import Stats from './Stats/Stats';
 import Feed from './Feed/Feed';
+import Login from './Login/Login';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+//TODO: think about https://reacttraining.com/react-router/web/example/route-config
 
 function App() {
   return (
@@ -23,6 +26,9 @@ function App() {
           </Route>
           <Route path='/stats'>
             <Stats />
+          </Route>
+          <Route path='/login'>
+            <Login />
           </Route>
           <Route path='/'>
             <Feed />

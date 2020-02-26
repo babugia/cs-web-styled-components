@@ -17,6 +17,9 @@ const Container = styled.div`
 const Header = () => {
   const [selectedMenu, setSelectedMenu] = useState(menuItemType.FEED);
 
+  // TODO: think about save selectedMenu with redux or something,
+  // to set when enter with url or when click in logo or login
+
   return (
     <Container>
       <Logo />
@@ -25,7 +28,5 @@ const Header = () => {
     </Container>
   );
 };
-
-//TODO: Folder structure, create component for logo, menu, menu item and login
 
 export default memo(Header);

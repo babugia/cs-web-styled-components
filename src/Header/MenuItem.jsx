@@ -6,23 +6,19 @@ import { Link } from 'react-router-dom';
 const MenuItem = props => {
   const { key, selected, setSelectedMenu, children, className } = props;
   const handleOnClick = () => {
-    const path = routerPathMapper[children];
     setSelectedMenu(children);
-    <Link to={path} />;
-    console.log({ path: routerPathMapper[children] });
   };
 
-  // TODO: A TAG NEED HREF, SO FIX THIS LATER WITH REACT ROUTER
   return (
-    // eslint-disable-next-line jsx-a11y/anchor-is-valid
-    <a
+    <Link
       key={key}
+      to={routerPathMapper[children]}
       className={className}
       selected={selected}
       onClick={handleOnClick}
     >
       {children}
-    </a>
+    </Link>
   );
 };
 

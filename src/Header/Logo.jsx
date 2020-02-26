@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
 import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 const Title = styled.h1`
   align-self: center;
@@ -14,12 +15,27 @@ const Container = styled.div`
   cursor: pointer;
 `;
 
-const Logo = ({ className }) => (
-  <Container>
-    <img className={className} src={logo} alt='cs' />
-    <Title>CS GO</Title>
-  </Container>
+const FeedLink = ({ children, className }) => (
+  <Link className={className} to='/'>
+    {children}
+  </Link>
 );
+
+const StyledLink = styled(FeedLink)`
+  display: flex;
+  text-decoration: none;
+`;
+
+const Logo = ({ className }) => {
+  return (
+    <Container>
+      <StyledLink>
+        <img className={className} src={logo} alt='cs' />
+        <Title>CS GO</Title>
+      </StyledLink>
+    </Container>
+  );
+};
 
 const StyledLogo = styled(Logo)`
   display: block;

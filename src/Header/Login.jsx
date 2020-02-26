@@ -1,17 +1,35 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
+// const LoginLink = ({ children, className }) => (
+//   <Link className={className} to='/login'>
+//     {children}
+//   </Link>
+// );
+
+// const StyledLink = styled(LoginLink)`
+//   display: flex;
+//   text-decoration: none;
+// `;
 
 const LoginButton = props => {
   const { className } = props;
-  return <button className={className}>Login</button>;
+  return (
+    // <button className={className}>Login</button>
+    <Link to='/login' className={className}>
+      Login
+    </Link>
+  );
 };
 
 const StyledLoginButton = styled(LoginButton)`
   width: 75px;
-  height: 45px;
+  padding: 5px 0;
   color: white;
   margin-right: 1rem;
   border-radius: 5px;
+  text-decoration: none;
   align-self: center;
   cursor: pointer;
   background: #6639a6;
