@@ -6,7 +6,7 @@ import { lastMatches } from '../mocks/feed';
 
 const Feed = () => (
   <Card>
-    <CardTitle>Feed</CardTitle>
+    <CardTitle>Last Matches</CardTitle>
     <CardContent displayValues={lastMatches} />
   </Card>
 );
