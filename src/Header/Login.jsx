@@ -2,21 +2,9 @@ import React, { memo } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-// const LoginLink = ({ children, className }) => (
-//   <Link className={className} to='/login'>
-//     {children}
-//   </Link>
-// );
-
-// const StyledLink = styled(LoginLink)`
-//   display: flex;
-//   text-decoration: none;
-// `;
-
 const LoginButton = props => {
   const { className } = props;
   return (
-    // <button className={className}>Login</button>
     <Link to='/login' className={className}>
       Login
     </Link>

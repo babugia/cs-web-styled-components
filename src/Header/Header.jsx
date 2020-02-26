@@ -20,6 +20,8 @@ const Header = () => {
   // TODO: think about save selectedMenu with redux or something,
   // to set when enter with url or when click in logo or login
 
+  // TODO: create card component with style
+  // box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
   return (
     <Container>
       <Logo />
