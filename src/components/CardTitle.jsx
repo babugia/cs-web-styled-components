@@ -9,7 +9,7 @@ const CardTitle = props => {
 
 const StyledCardTitle = styled(CardTitle)`
   padding: 0.7rem;
-  margin-bottom: 0;
+  margin: 0;
   font-size: 20px;
 `;
 
