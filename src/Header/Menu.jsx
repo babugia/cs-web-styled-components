@@ -7,6 +7,10 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   max-width: 66%;
+
+  @media (max-width: 375px) {
+    display: none;
+  }
 `;
 
 const Menu = props => {
@@ -29,3 +33,5 @@ const Menu = props => {
 };
 
 export default memo(Menu);
+
+// TODO: think about site responsiveness..

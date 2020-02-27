@@ -34,7 +34,12 @@ const StyledMenuItem = styled(MenuItem)`
   width: 100%;
   cursor: pointer;
 
-  &:hover {
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 0 1rem;
+  }
+
+  :hover {
     color: #e5dfdf;
   }
 

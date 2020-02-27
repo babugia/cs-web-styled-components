@@ -28,10 +28,11 @@ const StyledLoginButton = styled(LoginButton)`
   line-height: 28px;
   text-align: center;
   border: 2px white solid;
-  outline: none;
+  outline: 0;
 
-  &:hover {
+  :hover {
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
   }
 `;
 

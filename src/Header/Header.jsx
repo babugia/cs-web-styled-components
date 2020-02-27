@@ -1,7 +1,7 @@
 import React, { memo, useState } from 'react';
 import styled from 'styled-components';
 import Logo from './Logo';
-import Login from './Login';
+import LoginButton from './LoginButton';
 import Menu from './Menu';
 import { menuItemType } from './headerUtils';
 
@@ -24,7 +24,7 @@ const Header = () => {
     <Container>
       <Logo />
       <Menu selected={selectedMenu} setSelectedMenu={setSelectedMenu} />
-      <Login />
+      <LoginButton />
     </Container>
   );
 };
