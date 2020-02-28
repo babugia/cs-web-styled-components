@@ -11,3 +11,5 @@ export const lastEvents = [
   'EPICENTER 2019',
   'ECS Season 8 Finals'
 ];
+
+export const teams = ['MIBR', 'Astralis', 'FaZe', 'NAVI'];

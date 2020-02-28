@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import Header from '../Header/Header';
 
 const Content = styled.div`
-  margin-top: 5rem;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  max-width: 80%;
+  max-width: 70%;
 `;
 
 const Layout = props => (
@@ -19,3 +19,5 @@ const Layout = props => (
 );
 
 export default memo(Layout);
+
+// TODO: search about display: grid,
