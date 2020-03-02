@@ -1,26 +1,28 @@
 import React from 'react';
+import styled from 'styled-components';
 import Card from '../components/Card';
 import CardTitle from '../components/CardTitle';
 import CardContent from '../components/CardContent';
-import { lastMatches, lastEvents, teams } from '../mocks/feed';
+import { feedData } from '../mocks/feed';
+
+const Container = styled.div`
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+`;
 
 const Feed = () => (
-  <>
-    <Card cardWidth='20rem'>
-      <CardTitle>Last Matches</CardTitle>
-      <CardContent displayValues={lastMatches} />
-    </Card>
-    <Card cardWidth='20rem'>
-      <CardTitle>Last Events</CardTitle>
-      <CardContent displayValues={lastEvents} />
-    </Card>
-    <Card cardWidth='20rem'>
-      <CardTitle>Teams</CardTitle>
-      <CardContent displayValues={teams} />
-    </Card>
-  </>
+  <Container>
+    {feedData.map(({ title, values }) => (
+      <Card key={title} cardWidth='20rem'>
+        <CardTitle>{title}</CardTitle>
+        <CardContent displayValues={values} />
+      </Card>
+    ))}
+  </Container>
 );
-
-// TODO: Create mocked feed to mapping over, instead create 4 Card component
 
 export default Feed;

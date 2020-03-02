@@ -3,12 +3,7 @@ import styled from 'styled-components';
 import Header from '../Header/Header';
 
 const Content = styled.div`
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 70%;
+  width: 100%;
 `;
 
 const Layout = props => (
