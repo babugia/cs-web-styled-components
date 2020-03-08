@@ -11,6 +11,7 @@ const StyledCardTitle = styled(CardTitle)`
   padding: 0.7rem;
   margin: 0;
   font-size: 20px;
+  cursor: pointer;
 `;
 
 export default memo(StyledCardTitle);
