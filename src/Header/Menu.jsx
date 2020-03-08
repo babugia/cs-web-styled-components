@@ -14,17 +14,13 @@ const Container = styled.div`
 `;
 
 const Menu = props => {
-  const { selected, setSelectedMenu } = props;
+  const { selected } = props;
   const items = Object.values(menuItemType);
 
   return (
     <Container>
       {items.map((item, index) => (
-        <MenuItem
-          key={index}
-          selected={item === selected}
-          setSelectedMenu={setSelectedMenu}
-        >
+        <MenuItem key={index} selected={item === selected}>
           {item}
         </MenuItem>
       ))}

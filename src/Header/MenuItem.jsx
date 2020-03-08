@@ -4,19 +4,14 @@ import { routerPathMapper } from './headerUtils';
 import { Link } from 'react-router-dom';
 
 const MenuItem = props => {
-  const { key, selected, setSelectedMenu, children, className } = props;
-  const handleOnClick = () => {
-    setSelectedMenu(children);
-  };
+  const { key, selected, children, className } = props;
 
-  // FIXME: REMOVE ONCLICK EVENT
   return (
     <Link
       key={key}
       to={routerPathMapper[children]}
       className={className}
       selected={selected}
-      onClick={handleOnClick}
     >
       {children}
     </Link>

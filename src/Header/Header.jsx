@@ -1,11 +1,9 @@
-import React, { memo, useState } from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Logo from './Logo';
 import LoginButton from './LoginButton';
 import Menu from './Menu';
-import { menuItemType } from './headerUtils';
-import allActions from '../store/actions';
 
 const Container = styled.div`
   display: flex;
@@ -18,18 +16,12 @@ const Container = styled.div`
 
 const Header = () => {
   const shared = useSelector(state => state.shared);
-  const dispatch = useDispatch();
-
   const { selectedMenu } = shared;
-  const handleChangeSelected = selected => {
-    console.log({ selected });
-    dispatch(allActions.setMenuSelected(selected));
-  };
 
   return (
     <Container>
       <Logo />
-      <Menu selected={selectedMenu} setSelectedMenu={handleChangeSelected} />
+      <Menu selected={selectedMenu} />
       <LoginButton />
     </Container>
   );
