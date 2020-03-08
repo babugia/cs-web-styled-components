@@ -1,9 +1,11 @@
 import React, { memo, useState } from 'react';
 import styled from 'styled-components';
+import { useSelector, useDispatch } from 'react-redux';
 import Logo from './Logo';
 import LoginButton from './LoginButton';
 import Menu from './Menu';
 import { menuItemType } from './headerUtils';
+import allActions from '../store/actions';
 
 const Container = styled.div`
   display: flex;
@@ -15,15 +17,21 @@ const Container = styled.div`
 `;
 
 const Header = () => {
-  const [selectedMenu, setSelectedMenu] = useState(menuItemType.FEED);
+  const shared = useSelector(state => state.shared);
+  const dispatch = useDispatch();
 
-  // TODO: think about save selectedMenu with redux or something,
-  // to set when enter with url or when click in logo or login
+  const { selectedMenu } = shared;
+  console.log({ selectedMenu });
+
+  const handleChangeSelected = selected => {
+    console.log({ selected });
+    dispatch(allActions.setMenuSelected(selected));
+  };
 
   return (
     <Container>
       <Logo />
-      <Menu selected={selectedMenu} setSelectedMenu={setSelectedMenu} />
+      <Menu selected={selectedMenu} setSelectedMenu={handleChangeSelected} />
       <LoginButton />
     </Container>
   );

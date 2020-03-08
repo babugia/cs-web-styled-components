@@ -9,6 +9,7 @@ const MenuItem = props => {
     setSelectedMenu(children);
   };
 
+  // FIXME: REMOVE ONCLICK EVENT
   return (
     <Link
       key={key}
