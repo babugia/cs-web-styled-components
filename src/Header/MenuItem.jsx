@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { routerPathMapper } from './headerUtils';
-import { Link } from 'react-router-dom';
 
 const MenuItem = props => {
   const { key, selected, children, className } = props;
