@@ -21,8 +21,6 @@ const Header = () => {
   const dispatch = useDispatch();
 
   const { selectedMenu } = shared;
-  console.log({ selectedMenu });
-
   const handleChangeSelected = selected => {
     console.log({ selected });
     dispatch(allActions.setMenuSelected(selected));
@@ -38,3 +36,6 @@ const Header = () => {
 };
 
 export default memo(Header);
+
+// TODO: think about create a new branch to do an connected component as HOC,
+// instead useSelector and useDispatch
