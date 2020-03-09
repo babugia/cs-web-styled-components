@@ -4,6 +4,7 @@ import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
 
 const Title = styled.h1`
+  width: 77px;
   align-self: center;
   margin-left: 1rem;
   font-size: 1.5em;
@@ -13,6 +14,7 @@ const Title = styled.h1`
 const Container = styled.div`
   display: flex;
   cursor: pointer;
+  width: 181px;
 `;
 
 const FeedLink = ({ children, className }) => (
