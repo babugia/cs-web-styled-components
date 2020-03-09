@@ -14,6 +14,76 @@ const Container = styled.div`
   background: #6639a6;
 `;
 
+const MobileContainer = styled.div`
+  cursor: pointer;
+  position: relative;
+  padding: 0 30px;
+  outline: none;
+
+  @media (min-width: 670px) {
+    display: none;
+  }
+`;
+
+const PrimaryContainer = styled.div`
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-evenly;
+
+  @media (max-width: 670px) {
+    display: none;
+  }
+
+  @media (max-width: 1000px) {
+    justify-content: flex-start;
+    padding-left: 2rem;
+  }
+`;
+
+const PrimaryMenu = ({ selectedMenu }) => (
+  <PrimaryContainer>
+    <Menu selected={selectedMenu} />
+    <LoginButton />
+  </PrimaryContainer>
+);
+
+const Icon = styled.h2`
+  font-size: 0;
+  left: 10px;
+  top: 33px;
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  border-radius: 1px;
+  background: white;
+  &:after {
+    content: '';
+    top: 9px;
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    border-radius: 1px;
+    background: white;
+  }
+
+  &:before {
+    content: '';
+    top: -9px;
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    border-radius: 1px;
+    background: white;
+  }
+`;
+
+const MobileMenu = ({ selectedMenu }) => (
+  <MobileContainer>
+    <Icon>MOBILE</Icon>
+  </MobileContainer>
+);
+
 const Header = () => {
   const shared = useSelector(state => state.shared);
   const { selectedMenu } = shared;
@@ -21,8 +91,8 @@ const Header = () => {
   return (
     <Container>
       <Logo />
-      <Menu selected={selectedMenu} />
-      <LoginButton />
+      <PrimaryMenu selectedMenu={selectedMenu} />
+      <MobileMenu selectedMenu={selectedMenu} />
     </Container>
   );
 };

@@ -32,6 +32,10 @@ const StyledMenuItem = styled(MenuItem)`
 
   @media (max-width: 768px) {
     font-size: 16px;
+    padding: 0 0.7rem !important;
+  }
+
+  @media (max-width: 1000px) {
     padding: 0 1rem;
   }
 

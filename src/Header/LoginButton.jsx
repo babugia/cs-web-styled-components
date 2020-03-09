@@ -12,10 +12,11 @@ const LoginButton = props => {
 };
 
 const StyledLoginButton = styled(LoginButton)`
+  position: absolute;
+  right: 1.5rem;
   width: 75px;
   padding: 5px 0;
   color: white;
-  margin-right: 1rem;
   border-radius: 5px;
   text-decoration: none;
   align-self: center;
