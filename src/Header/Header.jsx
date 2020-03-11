@@ -1,9 +1,10 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
-import Logo from './Logo';
-import LoginButton from './LoginButton';
-import Menu from './Menu';
+import MobileMenu from './MobileMenu/MobileMenu';
+import Logo from './PrimaryMenu/Logo';
+import LoginButton from './PrimaryMenu/LoginButton';
+import Menu from './PrimaryMenu/Menu';
 
 const Container = styled.div`
   display: flex;
@@ -12,17 +13,6 @@ const Container = styled.div`
   width: 100%;
   height: 4.5rem;
   background: #6639a6;
-`;
-
-const MobileContainer = styled.div`
-  cursor: pointer;
-  position: relative;
-  padding: 0 30px;
-  outline: none;
-
-  @media (min-width: 670px) {
-    display: none;
-  }
 `;
 
 const PrimaryContainer = styled.div`
@@ -48,42 +38,6 @@ const PrimaryMenu = ({ selectedMenu }) => (
   </PrimaryContainer>
 );
 
-const Icon = styled.h2`
-  font-size: 0;
-  left: 10px;
-  top: 33px;
-  position: absolute;
-  width: 24px;
-  height: 3px;
-  border-radius: 1px;
-  background: white;
-  &:after {
-    content: '';
-    top: 9px;
-    position: absolute;
-    width: 24px;
-    height: 3px;
-    border-radius: 1px;
-    background: white;
-  }
-
-  &:before {
-    content: '';
-    top: -9px;
-    position: absolute;
-    width: 24px;
-    height: 3px;
-    border-radius: 1px;
-    background: white;
-  }
-`;
-
-const MobileMenu = ({ selectedMenu }) => (
-  <MobileContainer>
-    <Icon>MOBILE</Icon>
-  </MobileContainer>
-);
-
 const Header = () => {
   const shared = useSelector(state => state.shared);
   const { selectedMenu } = shared;
@@ -92,7 +46,7 @@ const Header = () => {
     <Container>
       <Logo />
       <PrimaryMenu selectedMenu={selectedMenu} />
-      <MobileMenu selectedMenu={selectedMenu} />
+      <MobileMenu />
     </Container>
   );
 };

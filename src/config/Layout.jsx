@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 
 const Content = styled.div`
   width: 100%;
+  padding-bottom: 3rem;
 `;
 
 const Layout = props => (

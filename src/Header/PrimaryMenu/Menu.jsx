@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
 import MenuItem from './MenuItem';
-import { menuItemType } from './headerUtils';
+import { menuItemType } from '../headerUtils';
 
 const Container = styled.div`
   display: flex;
